@@ -1,0 +1,15 @@
+@use './abstract' as var;
+@use './base/reset.scss';
+
+@use './components/registration-form_component.scss';
+
+.wrapper {
+  background: var.$wrapperBackground;
+}
+
+section[aria-label="Registration Form"] {
+  width: 100vw;
+  height: 100vh;
+
+  padding: var.$registrationFormSectionPadding;
+}

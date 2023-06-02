@@ -1,0 +1,63 @@
+@use '../abstract' as var;
+
+form[class="form-registration"] {
+  width: var.$registrationFormWidth;
+  height: var.$registrationFormHeight;
+
+  margin: 0 auto;
+  padding: var.$registrationFormPadding;
+
+  background: var.$registrationFormBackground;
+  border-radius: var.$registrationFormBorderRadius;
+  border-right: var.$registrationFormBorder;
+  box-shadow: var.$registrationFormShadow;
+
+  display: flex;
+  flex-direction: column;
+  gap: var.$registrationFormGap;
+
+  label {
+    display: flex;
+    flex-direction: column;
+
+    font-size: var.$registrationFormLabelFontSize;
+    color: var.$registrationFormLabelFontColor;
+
+    padding: var.$registrationFormLabelPadding;
+  }
+
+  input:not([type="submit"]) {
+    height: var.$registrationFormInputHeight;
+
+    margin-top: var.$registrationFormInputMargin;
+    padding: var.$registrationFormInputPadding;
+
+    background: var.$registrationFormInputBackground;
+    border-radius: var.$registrationFormInputBorderRadius;
+
+    color: var.$registrationFormInputColor;
+    font-weight: var.$registrationFormInputFontWeight;
+    letter-spacing: var.$registrationFormInputLetterSpacing;
+  }
+
+  input[type="submit"] {
+    width: var.$registrationFormButtonSubmitWidth;
+    height: var.$registrationFormButtonSubmitHeight;
+
+    margin: var.$registrationFormButtonSubmitMargin auto 0 auto;
+
+    background: var.$registrationFormButtonSubmitBackground;
+
+    color: var.$registrationFormButtonSubmitFontColor;
+    font-size: var.$registrationFormButtonSubmitFontSize;
+
+    border-radius: var.$registrationFormButtonSubmitBorderRadius;
+  }
+}
+
+.form-registration__title {
+  color: var.$registrationFormTitleColor;
+  font-weight: bold;
+  font-size: var.$registrationFormTitleFontSize;
+  padding: var.$registrationFormTitlePadding;
+}

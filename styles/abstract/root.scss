@@ -1,0 +1,29 @@
+@use './colors.scss' as *;
+
+$wrapperBackground:
+        linear-gradient(45deg,  rgba(66, 183, 245,0.8) 0%,rgba(66, 245, 189,0.4) 100%);
+
+
+$registrationFormWidth: 65vw;
+$registrationFormHeight: 60vh;
+$registrationFormSectionPadding: 2.5rem 0;
+$registrationFormPadding: 1.5rem 4rem;
+$registrationFormBackground: #fff;
+$registrationFormBorderRadius: 1rem;
+$registrationFormBorder: 2rem solid $accent;
+$registrationFormShadow: 0px 0px 45px 2px rgba(0,0,0,.25);
+$registrationFormGap: .5rem;
+
+$registrationFormLabelPadding: .25rem .75rem;
+
+$registrationFormInputHeight: 45px;
+$registrationFormInputMargin: .35rem;
+$registrationFormInputBackground: rgba(0,0,0,.125);
+$registrationFormInputBorderRadius: .25rem;
+$registrationFormInputPadding: .25rem 1rem;
+
+$registrationFormButtonSubmitWidth: 50%;
+$registrationFormButtonSubmitHeight: 50px;
+$registrationFormButtonSubmitBackground: $accent;
+$registrationFormButtonSubmitBorderRadius: .5rem;
+$registrationFormButtonSubmitMargin: .5rem;

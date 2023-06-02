@@ -1,0 +1,19 @@
+@use './colors.scss' as *;
+
+$registrationFormTitleColor: $accent;
+$registrationFormTitleFontSize: 2.75rem;
+$registrationFormTitlePadding: 1rem;
+
+$registrationFormLabelFontSize: 1.5rem;
+$registrationFormLabelFontColor: rgba(0,0,0,.5);
+
+$registrationFormInputColor: #000;
+$registrationFormInputFontWeight: 600;
+$registrationFormInputLetterSpacing: .05rem;
+
+$registrationFormButtonSubmitFontColor: #fff;
+$registrationFormButtonSubmitFontSize: 1.35rem;
+
+.wrapper {
+  font-family: sans-serif;
+}
