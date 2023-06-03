@@ -1,0 +1,62 @@
+@use '../abstract' as var;
+
+.form-registration__modal-validation {
+  width: var.$registrationFormValidationModalWidth;
+  height: var.$registrationFormValidationModalHeight;
+
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-50%);
+
+  border-radius: var.$registrationFormBorderRadius;
+
+  &[open] {
+    display: flex;
+  }
+
+  flex-direction: column;
+
+  padding: var.$registrationFormValidationModalPadding;
+  
+  @media #{var.$tabletMediaWidth} {
+    $registrationFormValidationModalWidth: 70vw;
+    $registrationFormValidationModalHeight: 50vh;
+    width: $registrationFormValidationModalWidth;
+    height: $registrationFormValidationModalHeight;
+  }
+
+  @media #{var.$phoneMediaWidth2} {
+    $registrationFormValidationModalHeight: 40vh;
+    height: $registrationFormValidationModalHeight;
+  }
+
+  ul {
+    flex: 1 1 auto;
+
+    font-size: var.$registrationFormValidationModalFontSize;
+  }
+
+  &::backdrop {
+    background: rgba(0,0,0,.5);
+  }
+}
+
+.modal-validation__button-close {
+  width: var.$registrationFormValidationModalCloseButtonWidth;
+  height: var.$registrationFormValidationModalCloseButtonHeight;
+
+  background: var.$accent;
+
+  border-radius: var.$registrationFormButtonSubmitBorderRadius;
+
+  margin: 0 auto;
+
+  font-size: var.$registrationFormValidationModalCloseButtonFontSize;
+  color: #fff;
+
+  position: relative;
+  &:active {
+    top: 2px;
+  }
+}

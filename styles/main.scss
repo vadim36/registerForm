@@ -2,6 +2,7 @@
 @use './base/reset.scss';
 
 @use './components/registration-form_component.scss';
+@use './components/modal-validation_component.scss';
 
 .wrapper {
   background: var.$wrapperBackground;

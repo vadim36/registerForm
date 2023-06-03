@@ -2,38 +2,48 @@
 <html lang="en">
 
 <head>
-     <meta charset="UTF-8">
-     <!--CEO tags-->
-     <meta name="author" content="Vadim Medvedev">
-     <meta name="descriptions" content="">
+    <meta charset="UTF-8">
+    <!--CEO tags-->
+    <meta name="author" content="Vadim Medvedev">
+    <meta name="descriptions" content="">
 
-     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
-     <title>Document</title>
-     <link rel="preload" href="./css/main.css" as="style" onload="this.rel = 'stylesheet'">
-     <script src="./script/_main/index.js" defer></script>
-     <!--<link rel="shortcut icon" href="" type="image/x-icon">-->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <title>Document</title>
+    <link rel="preload" href="./css/main.css" as="style" onload="this.rel = 'stylesheet'">
+    <script src="./script/_main/index.js" defer type="module"></script>
+    <script src="./script/_modules/validation_errors.js" defer type="module"></script>
+    <!--<link rel="shortcut icon" href="" type="image/x-icon">-->
 </head>
 
 <body>
 
-    <div class="wrapper">
-        <section aria-label="Registration Form">
-            <form action="#" name="registrationForm" class="form-registration">
-                <h2 class="form-registration__title">Регистрация</h2>
-                <label for="registrationFormLogin">
-                    Логин
-                    <input type="text" name="registrationFormLogin">
-                </label>
-                <label for="registrationFormPassword">
-                    Пароль
-                    <input type="password" name="registrationFormPassword">
-                </label>
-                <input type="submit" name="registrationFormSubmit">
-            </form>
-        </section>
-    </div>
-
+<div class="wrapper">
+    <section aria-label="Registration Form">
+        <form action="/" name="registrationForm" class="form-registration">
+            <h2 class="form-registration__title">Регистрация</h2>
+            <label for="formRegistrationLogin">
+                Логин
+                <input type="text"
+                       id="formRegistrationLogin"
+                       name="formRegistrationLogin">
+            </label>
+            <label for="formRegistrationPassword">
+                Пароль
+                <input type="password"
+                       name="formRegistrationPassword"
+                       id="formRegistrationPassword">
+            </label>
+            <input type="submit" name="registrationFormSubmit">
+        </form>
+    </section>
+    <dialog aria-label="For Validation Errors"
+            class="form-registration__modal-validation"
+            tabindex="-1">
+        <ul></ul>
+        <button type="button" class="modal-validation__button-close">Закрыть</button>
+    </dialog>
+</div>
 </body>
 
 </html>
