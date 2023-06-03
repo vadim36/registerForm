@@ -4,6 +4,7 @@ import {
    SHORT_PASSWORD_ERROR,
    LONG_PASSWORD_ERROR,
    SIMPLE_PASSWORD_ERROR} from '../_modules/validation_errors.js';
+import {sendingRequest} from "../_modules/send_request_fn.js";
 
 //*Валидация
 const registrationForm = document.forms.registrationForm;
@@ -72,4 +73,11 @@ registrationForm.onsubmit = event => {
 
       registrationFormValidationErrorModal.showModal();
    }
+
+   const body = {
+      login: registrationFormLoginFieldValue,
+      password: registrationFormPasswordFieldValue
+   }
+   sendingRequest('https://jsonplaceholder.typicode.com/users', 'POST', body)
+      .then(response => console.log(response));
 }
