@@ -1,10 +1,15 @@
 @use './colors.scss' as *;
 
+$tabletMediaWidth: '(width < 1000px)';
+$mobileMediaWidth: '(width < 750px)';
+$phoneMediaWidth: '(width < 600px)';
+$phoneMediaWidth2: '(width < 500px)';
+
 $wrapperBackground:
         linear-gradient(45deg,  rgba(66, 183, 245,0.8) 0%,rgba(66, 245, 189,0.4) 100%);
 
 
-$registrationFormWidth: 65vw;
+$registrationFormWidth: 750px;
 $registrationFormHeight: 60vh;
 $registrationFormSectionPadding: 2.5rem 0;
 $registrationFormPadding: 1.5rem 4rem;

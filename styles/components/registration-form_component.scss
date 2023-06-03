@@ -16,6 +16,21 @@ form[class="form-registration"] {
   flex-direction: column;
   gap: var.$registrationFormGap;
 
+  @media #{var.$tabletMediaWidth} {
+    $registrationFormWidth: 70vw;
+    width: $registrationFormWidth;
+  }
+
+  @media #{var.$phoneMediaWidth} {
+    $registrationFormWidth: 85vw;
+    width: $registrationFormWidth;
+  }
+
+  @media #{var.$phoneMediaWidth2} {
+    $registrationFormPadding: 1.5rem 2rem;
+    padding: $registrationFormPadding;
+  }
+
   label {
     display: flex;
     flex-direction: column;
@@ -52,6 +67,16 @@ form[class="form-registration"] {
     font-size: var.$registrationFormButtonSubmitFontSize;
 
     border-radius: var.$registrationFormButtonSubmitBorderRadius;
+
+    position: relative;
+    &:active {
+      top: 2px;
+    }
+
+    @media #{var.$phoneMediaWidth2} {
+      $registrationFormButtonSubmitWidth: 70%;
+      width: $registrationFormButtonSubmitWidth;
+    }
   }
 }
 
@@ -60,4 +85,14 @@ form[class="form-registration"] {
   font-weight: bold;
   font-size: var.$registrationFormTitleFontSize;
   padding: var.$registrationFormTitlePadding;
+
+  @media #{var.$mobileMediaWidth} {
+    $registrationFormTitleFontSize: 2.25rem;
+    font-size: $registrationFormTitleFontSize;
+  }
+
+  @media #{var.$phoneMediaWidth2} {
+    $registrationFormTitleFontSize: 2rem;
+    font-size: $registrationFormTitleFontSize;
+  }
 }
