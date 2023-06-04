@@ -41,7 +41,7 @@ form[class="form-registration"] {
     padding: var.$registrationFormLabelPadding;
   }
 
-  input:not([type="submit"]) {
+  input {
     height: var.$registrationFormInputHeight;
 
     margin-top: var.$registrationFormInputMargin;
@@ -55,7 +55,7 @@ form[class="form-registration"] {
     letter-spacing: var.$registrationFormInputLetterSpacing;
   }
 
-  input[type="submit"] {
+  button[type="submit"] {
     width: var.$registrationFormButtonSubmitWidth;
     height: var.$registrationFormButtonSubmitHeight;
 

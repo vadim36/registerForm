@@ -74,10 +74,7 @@ registrationForm.onsubmit = event => {
       registrationFormValidationErrorModal.showModal();
    }
 
-   const body = {
-      login: registrationFormLoginFieldValue,
-      password: registrationFormPasswordFieldValue
-   }
-   sendingRequest('https://jsonplaceholder.typicode.com/users', 'POST', body)
+   const formData = new FormData(registrationForm);
+   sendingRequest('https://jsonplaceholder.typicode.com/users', 'POST', formData)
       .then(response => console.log(response));
 }
